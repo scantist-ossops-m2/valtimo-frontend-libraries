@@ -434,14 +434,26 @@ export class DossierListComponent implements OnInit, OnDestroy {
         const status = res.statuses.find(
           (status: InternalCaseStatus) => status.key === item.internalStatus
         );
-        if (!status) return item;
+        // if (!status) return item;
 
         return {
           ...item,
           tags: [
             {
-              content: status.title,
-              type: InternalCaseStatusUtils.getTagTypeFromInternalCaseStatusColor(status.color),
+              content: 'tag1',
+              // type: InternalCaseStatusUtils.getTagTypeFromInternalCaseStatusColor(status.color),
+            },
+            {
+              content: 'tag2',
+              // type: InternalCaseStatusUtils.getTagTypeFromInternalCaseStatusColor(status.color),
+            },
+            {
+              content: 'tag3',
+              // type: InternalCaseStatusUtils.getTagTypeFromInternalCaseStatusColor(status.color),
+            },
+            {
+              content: 'tag4',
+              // type: InternalCaseStatusUtils.getTagTypeFromInternalCaseStatusColor(status.color),
             },
           ],
         };
